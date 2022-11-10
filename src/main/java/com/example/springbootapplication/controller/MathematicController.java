@@ -12,17 +12,6 @@ public class MathematicController {
     public MathematicController(MathematicService mathematicService) {
         this.mathematicService = mathematicService;
     }
-    @PostMapping("/create")
-    public int create(@RequestParam int x,@RequestParam int y){
-
-        return mathematicService.createMathematic(x,y);
-    }
-   @PutMapping("/update")
-    public int update(@RequestParam int x,@RequestParam int y){
-        return mathematicService.updateMathematic(x,y);
-    }
-
-
 
     @GetMapping("/addition")
     public int addition(@RequestParam int x, @RequestParam int y){
@@ -39,10 +28,6 @@ public class MathematicController {
     @GetMapping("/smaller")
     public int smaller(@RequestParam int x, int y){
         return mathematicService.smaller(x, y);
-    }
-    @DeleteMapping("/delete")
-    public int delete(@RequestParam int x, int y){
-        return mathematicService.deleteMathematic(x, y);
     }
 
 }

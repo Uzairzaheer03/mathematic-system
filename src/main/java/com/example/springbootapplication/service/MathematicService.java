@@ -8,41 +8,26 @@ import java.util.Optional;
 @Service
 public class MathematicService {
 
-
-    public int createMathematic (int x, int y){
-        Mathematic mathematic = new Mathematic(x,y);
-        return "mathematic";
-    }
-   public int updateMathematic(int x, int y){
-        Optional<Mathematic> optionalMathematic ;
-        return
-    }
-
     public int addition(int x, int y){
        Mathematic mathematic = new Mathematic(x, y);
-        return .add(mathematic);
+        return mathematic.addition(x,y);
      }
-
-
-
 
     public int multiplyMathematic(int x, int y) {
            Mathematic mathematic = new Mathematic(x, y);
-           return
+           return mathematic.multiply(x,y);
     }
 
     public int subtract(int x, int y) {
-
+        Mathematic mathematic = new Mathematic(x, y);
+        return mathematic.subtract(x,y);
     }
-
 
     public int smaller(int x, int y) {
-
+        Mathematic mathematic = new Mathematic(x, y);
+        return mathematic.smaller(x,y);
     }
 
-    public int deleteMathematic(int x, int y) {
-
-    }
 }
 
 
