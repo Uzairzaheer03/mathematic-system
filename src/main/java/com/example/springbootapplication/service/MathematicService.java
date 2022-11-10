@@ -1,26 +1,46 @@
 package com.example.springbootapplication.service;
 
 import com.example.springbootapplication.domain.Mathematic;
-import com.example.springbootapplication.repository.MathematicRepository;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 @Service
 public class MathematicService {
-    private static MathematicRepository mathematicRepository = null;
 
 
-    public MathematicService(MathematicRepository methamaticRepository){
-        this.mathematicRepository = methamaticRepository;
+    public int createMathematic (int x, int y){
+        Mathematic mathematic = new Mathematic(x,y);
+        return "mathematic";
+    }
+   public int updateMathematic(int x, int y){
+        Optional<Mathematic> optionalMathematic ;
+        return
     }
 
-    public static int addition(int x, int y){
+    public int addition(int x, int y){
        Mathematic mathematic = new Mathematic(x, y);
-       MathematicRepository.add(mathematic);
-       return "added";
+        return .add(mathematic);
+     }
+
+
+
+
+    public int multiplyMathematic(int x, int y) {
+           Mathematic mathematic = new Mathematic(x, y);
+           return
+    }
+
+    public int subtract(int x, int y) {
+
     }
 
 
-    public static int multiply(int x, int y) {
+    public int smaller(int x, int y) {
+
+    }
+
+    public int deleteMathematic(int x, int y) {
 
     }
 }
