@@ -21,19 +21,19 @@ public class Mathematic {
     }
 
 
-    public  int addition(int x, int y){
+    public static int addition(int x, int y){
         return x + y  ;
     }
-    public int subtract(int x, int y){
+    public static int subtract(int x, int y){
 
         return x - y;
     }
-    public int multiply(int x, int y){
+    public static int multiply(int x, int y){
 
         return x * y ;
     }
 
-    public int smaller(int x, int y) {
+    public static int smaller(int x, int y) {
         if(x<y){
             return x;
         }else{
@@ -55,6 +55,11 @@ public class Mathematic {
         this.x = x;
         this.y = y;
         this.z = z;
+    }
+
+
+    public static int  factorial(int x){
+        return x;
     }
 
 

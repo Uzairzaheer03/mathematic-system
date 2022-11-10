@@ -29,6 +29,10 @@ public class MathematicService {
         Mathematic mathematic = new Mathematic(x, y, z);
         return mathematic.multipleAddition(x, y, z);
     }
+    public static int factorial(int x){
+       return Mathematic.factorial(x);
+
+    }
 
 }
 
