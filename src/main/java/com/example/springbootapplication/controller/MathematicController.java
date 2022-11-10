@@ -14,20 +14,28 @@ public class MathematicController {
     }
 
     @GetMapping("/addition")
-    public int addition(@RequestParam int x, @RequestParam int y){
+    public int addition(@RequestParam int x, @RequestParam int y) {
         return mathematicService.addition(x, y);
     }
+
     @GetMapping("/multiply")
-    public int multiply(@RequestParam int x, int y){
+    public int multiply(@RequestParam int x, int y) {
         return mathematicService.multiplyMathematic(x, y);
     }
+
     @GetMapping("/subtract")
-    public int subtract(@RequestParam int x, int y){
+    public int subtract(@RequestParam int x, int y) {
         return mathematicService.subtract(x, y);
     }
+
     @GetMapping("/smaller")
-    public int smaller(@RequestParam int x, int y){
+    public int smaller(@RequestParam int x, int y) {
         return mathematicService.smaller(x, y);
     }
 
+    @GetMapping("/additions")
+    public int addition(@RequestParam int x, int y, int z) {
+
+        return mathematicService.multipleAddition(x, y, z);
+    }
 }

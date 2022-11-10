@@ -4,8 +4,6 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.persistence.*;
-
 
 @Getter
 @Setter
@@ -16,6 +14,7 @@ public class Mathematic {
     private int x;
 
     private int y;
+    private int z;
 
     public Mathematic(int addition, int multiply, int subtract, int smaller) {
 
@@ -23,7 +22,7 @@ public class Mathematic {
 
 
     public  int addition(int x, int y){
-        return x + y;
+        return x + y  ;
     }
     public int subtract(int x, int y){
 
@@ -46,5 +45,20 @@ public class Mathematic {
         this.x = x;
         this.y = y;
     }
+
+    public int multipleAddition(int x, int y, int z){
+
+        return x+y+z;
+
+    }
+    public Mathematic(int x, int y, int z) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
+
+
+
+
 
 }
