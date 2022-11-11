@@ -7,27 +7,24 @@ public class CalculationController {
 
 
     @GetMapping("/performOperation")
-    public int performOperation(int x, int y, OperationEnum operationEnum) {
+    public String performOperation(int x, int y, OperationEnum operationEnum) {
 
         switch (operationEnum) {
             case ADDITION:
-               return x + y;
-                break;
+                return "addition";
+            break;
             case MULTIPLY:
-                return x * y;
+                return "multiply";
             break;
             case SUBTRACT:
-                return x - y;
+                return "subtract";
             break;
             case SMALLER:
-                if(x<y){
-                    return x;
-                }else{
-                    return y;
-                }
+                return "smaller";
             break;
         }
 
-        }
-        return operationEnum;
+    return operationEnum;
     }
+
+}

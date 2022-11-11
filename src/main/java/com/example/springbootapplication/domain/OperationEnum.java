@@ -6,6 +6,7 @@ public enum OperationEnum {
     SUBTRACT,
     SMALLER;
 
+
 }
 
 
