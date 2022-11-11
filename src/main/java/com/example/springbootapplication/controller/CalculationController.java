@@ -1,30 +1,33 @@
 package com.example.springbootapplication.controller;
 
+import com.example.springbootapplication.domain.Mathematic;
 import com.example.springbootapplication.domain.OperationEnum;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
+@RestController
 public class CalculationController {
 
 
     @GetMapping("/performOperation")
-    public String performOperation(int x, int y, OperationEnum operationEnum) {
+    public int performOperation(int x, int y, OperationEnum operationEnum) {
 
         switch (operationEnum) {
             case ADDITION:
-                return "addition";
-            break;
+                return Mathematic.addition(x, y);
+
             case MULTIPLY:
-                return "multiply";
-            break;
+                return Mathematic.multiply(x, y);
+
             case SUBTRACT:
-                return "subtract";
-            break;
+                return Mathematic.subtract(x, y);
+
             case SMALLER:
-                return "smaller";
-            break;
+                return Mathematic.smaller(x, y);
+
         }
 
-    return operationEnum;
+        return 0;
     }
 
 }
