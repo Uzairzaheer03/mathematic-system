@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class CalculationController {
 
-
     @GetMapping("/performOperation")
     public int performOperation(int x, int y, OperationEnum operationEnum) {
 

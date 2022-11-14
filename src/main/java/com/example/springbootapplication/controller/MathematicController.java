@@ -19,22 +19,22 @@ public class MathematicController {
     }
 
     @GetMapping("/multiply")
-    public int multiply(@RequestParam int x, int y) {
+    public int multiply(@RequestParam int x,@RequestParam int y) {
         return mathematicService.multiplyMathematic(x, y);
     }
 
     @GetMapping("/subtract")
-    public int subtract(@RequestParam int x, int y) {
+    public int subtract(@RequestParam int x,@RequestParam int y) {
         return mathematicService.subtract(x, y);
     }
 
     @GetMapping("/smaller")
-    public int smaller(@RequestParam int x, int y) {
+    public int smaller(@RequestParam int x,@RequestParam int y) {
         return mathematicService.smaller(x, y);
     }
 
     @GetMapping("/additions")
-    public int addition(@RequestParam int x, int y, int z) {
+    public int addition(@RequestParam int x,@RequestParam int y,@RequestParam int z) {
 
         return mathematicService.multipleAddition(x, y, z);
     }
